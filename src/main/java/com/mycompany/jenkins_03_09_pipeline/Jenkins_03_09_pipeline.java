@@ -1,19 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.jenkins_03_09_pipeline;
 
-/**
- *
- * @author ICX
- */
-public class Jenkins_03_09_pipeline {
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-        int a=10;
-        int b=30;
-        System.out.println("Hello World!    "+a+b);
-    }
+public class Jenkins_03_09_pipeline {
+   
+	   @Test
+	    public void testAddition() {
+	        int num1 = 5;
+	        int num2 = 7;
+	        int expectedSum = 12;
+	        int actualSum = num1 + num2;
+	        System.out.println(actualSum+"<--------");
+	        Assert.assertEquals(actualSum, expectedSum, "The sum is not correct");
+	    }
 }
